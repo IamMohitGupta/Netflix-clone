@@ -1,0 +1,12 @@
+* {
+  color: white;
+}
+button {
+  background-color: rgb(0, 0, 0, 0.5);
+  border: none;
+  margin: 10px;
+  width: 70px;
+}
+header {
+  height: 320px;
+}
