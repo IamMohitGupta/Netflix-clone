@@ -1,0 +1,42 @@
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1;
+  transition-timing-function: linearf;
+  transition: all 0.5s;
+}
+.bell {
+  cursor: pointer;
+  width: 30px;
+  object-fit: contain;
+  position: fixed;
+  right: 65px;
+}
+.logo {
+  cursor: pointer;
+  width: 90px;
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  object-fit: contain;
+}
+.user {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  width: 30px;
+  object-fit: contain;
+  align-items: right;
+}
+.nav_bg {
+  background: #111;
+  height: 30px;
+}
+.logo:hover,
+.user:hover {
+  opacity: 0.7;
+}
