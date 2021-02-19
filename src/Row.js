@@ -20,25 +20,25 @@ function Row({title,fetchUrl,isLargeRow}) {
 
     const opts={
         height:"390",
-        width:"100%",
+        width:"50%",
         playervars:{
             autoplay:1,
         },
     };
 
-    const handleclick = (movie) =>{
-        if(trailerUrl){
-            setTrailerUrl("");
-        }
-        else{
-            movieTrailer(movie?.name || "")
-            .then((url) => {
-                const urlParams = new URLSearchParams(new URL(url).search);
-                setTrailerUrl(urlParams.get("v"));
-            })
-            .catch((error) => console.log(error));
-        }
-    };
+    // const handleclick = (movie) =>{
+    //     if(trailerUrl){
+    //         setTrailerUrl("");
+    //     }
+    //     else{
+    //         movieTrailer(movie?.name || "")
+    //         .then((url) => {
+    //             const urlParams = new URLSearchParams(new URL(url).search);
+    //             setTrailerUrl(urlParams.get("v"));
+    //         })
+    //         .catch((error) => console.log(error));
+    //     }
+    // };
 
     return (
         <div className = "row">
@@ -49,15 +49,16 @@ function Row({title,fetchUrl,isLargeRow}) {
                     movies.map(movie => (
                         <img 
                         key={movie.id}
-                        onClick={()=> handleclick(movie)}
+                        // onClick={()=> handleclick(movie)}
                         className={`row_poster ${isLargeRow && "row_large"}`} 
                         src={`${base_Url}${movie.poster_path}`} 
                         alt={movie.name}>
-                        </img>
+                        </img>  
                     ))
                 }
+                    
             </div>
-            {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+            {trailerUrl &&<YouTube videoId={trailerUrl} opts={opts}/>}
         </div>
     )
 }
