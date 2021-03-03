@@ -58,7 +58,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.content h1 {
+.content > h1 {
   font-size: 3.125rem;
 }
 .content > h3 {
@@ -72,16 +72,27 @@
   margin-bottom: 30px;
 }
 .input_email {
+  margin-top: 20px;
   padding: 10px;
   outline-width: 0;
-  height: 30px;
+  height: 29.25px;
   width: 30%;
   max-width: 600px;
-}
-.get_started {
-  padding: 16px 20px;
-  font-size: 1rem;
   border: none;
+  border-radius: 0px;
+  outline: none;
+}
+form > .get_started {
+  margin-top: 3px;
+  position: relative;
+  top: 0.9px;
+  padding: 16px 20px;
+  font-size: 0.96rem;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
   color: #fff;
+  border-radius: 0px;
   background-color: #e50914;
 }
